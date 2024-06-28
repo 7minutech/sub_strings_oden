@@ -2,7 +2,6 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings(word, words)
     substr_arr = substring_to_arr(word)
-    p substr_arr
     substr_hash = {}
     substr_arr.each do |str|
         matches = count_matches(str,words)
@@ -26,8 +25,8 @@ def substring_to_arr(word)
 end
 def count_matches(substr,words)
     counter = 0
-    words_str = words.join(" ")
     words.each do |word|
+        #no need to count if substr isn't in array
         if words.include?(substr)
           if substr == word
             counter+=1
