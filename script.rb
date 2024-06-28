@@ -7,6 +7,7 @@ def substrings(word, words)
     substr_hash = {}
     substr_arr.each do |str|
         matches = count_matches(str,words)
+        #increment if the key already exists
         if matches > 0
             unless substr_hash[str] == nil
                 substr_hash[str] +=1
