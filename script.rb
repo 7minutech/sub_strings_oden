@@ -15,5 +15,17 @@ def substring_to_arr(word)
     end
     substring_arr
 end
+def count_matches(substr,words)
+    counter = 0
+    words_str = words.join(" ")
+    words.each do |word|
+        unless words_str.include?(substr)
+          if substr == word
+            counter+=1
+          end
+        end
+    end
+    counter
+
 substrings("below", dictionary)
 #expected output { "below" => 1, "low" => 1 }
